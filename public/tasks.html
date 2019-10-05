@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href='homepage.css' rel='stylesheet' />
+    <script src="js/signOut.js"></script>
+    <script src="../public/js/andreia-pendingTasks.js"></script>
+
+
+    <title>Tuesday</title>
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="calendar.html">Tuesday</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-right" id="navbarNavDropdown">
+                    <div class="space-filler"></div>
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item ">
+                            <a class="nav-link " href="calendar.html">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  active" href="tasks.html">Tasks</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="employee.html">Employees</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#signOut">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div id="accordion">
+
+                <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
+                               Assign new task to employee currently on shift
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body">
+                                <form>
+            
+                                        <div class="form-group">
+                                                <div class="form-group">
+                                                        <label for="taskTitle">Task Title</label>
+                                                        <textarea class="form-control" id="taskTitle" rows="1"></textarea>
+                                                    </div>
+                                            
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label for="taskComment">Task Comments</label>
+                                            <textarea class="form-control" id="taskComment" rows="3"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mb-2" id="addNewTaskButton" value="Add Task">Assign Task</button>
+                            
+                                    </form>
+                               
+                          </div>
+                        </div>
+                      </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseOne">
+Pending Tasks                        </button>
+                    </h5>
+                </div>
+                
+
+                <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Task Title</th>
+                                        <th scope="col">Task Description</th>
+                                        
+                                        <th scope="col">Update</th>
+                                        <th scope="col">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                                
+                            </table>
+                            <br>
+                            <button type="submit" class="btn btn-primary mb-2" id="addNewTaskButton" value="Add Task">Update Tasks</button>
+                        </div>
+                        
+                    </div>
+            </div>
+
+
+
+        </div>
+    <div class="container">
+
+        <!-- To-Do List -->
+        
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signOut" tabindex="-1" role="dialog" aria-labelledby="signOutLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="signOutLabel">Are you sure you want to sign out?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="logoutImage">
+                    <img src="../images/logout.jpg" alt=""  id="logoutImage" style="width: 200px">
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"  data-dismiss="modal" style="color: aliceblue" onclick="signOut()"> Sign Out </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="remain()"> Go Back </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/alan-tasks.js"></script>
+</body>
+
+</html>
